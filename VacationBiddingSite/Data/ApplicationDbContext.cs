@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using VacationBiddingSite.Models;
+using VacationBiddingSite.Models.VacationerProfile;
+using VacationBiddingSite.Models.VacationDestinations;
 
 namespace VacationBiddingSite.Data
 {
@@ -22,5 +24,13 @@ namespace VacationBiddingSite.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        public DbSet<VacationBiddingSite.Models.VacationerProfile.VacationerParameters> VacationerParametersTable { get; set; }
+
+        public DbSet<VacationBiddingSite.Models.VacationDestinations.hotel> hotel { get; set; }
+
+        public DbSet<VacationBiddingSite.Models.VacationDestinations.city> city { get; set; }
+
+        public DbSet<VacationBiddingSite.Models.VacationDestinations.country> country { get; set; }
     }
 }
