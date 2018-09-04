@@ -9,5 +9,6 @@ namespace VacationBiddingSite.Models.VacationDestinations
     {
         public int id { get; set; }
         public string name { get; set; }
+        public country GetCountry { get; set; }
     }
 }

@@ -52,9 +52,10 @@ namespace VacationBiddingSite.Controllers.VacationDestinations
         // POST: hotels/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,name,AverageRoomRate,Restaurant24Hour,buffet")] hotel hotel)
+        public async Task<IActionResult> Create([Bind("id,name,AverageRoomRate,Restaurant24Hour,buffet,GetCityid")] hotel hotel)
         {
             if (ModelState.IsValid)
             {
