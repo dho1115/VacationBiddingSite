@@ -11,9 +11,10 @@ using VacationBiddingSite.Data;
 namespace VacationBiddingSite.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180905051030_AddedBuilderEntityCity")]
+    partial class AddedBuilderEntityCity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -181,14 +182,14 @@ namespace VacationBiddingSite.Data.Migrations
 
             modelBuilder.Entity("VacationBiddingSite.Models.VacationDestinations.city", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<string>("name")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int?>("GetCountryid");
 
-                    b.Property<string>("name");
+                    b.Property<int>("id");
 
-                    b.HasKey("id");
+                    b.HasKey("name");
 
                     b.HasIndex("GetCountryid");
 

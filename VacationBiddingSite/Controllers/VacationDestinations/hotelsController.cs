@@ -55,7 +55,7 @@ namespace VacationBiddingSite.Controllers.VacationDestinations
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,name,AverageRoomRate,Restaurant24Hour,buffet,GetCityid")] hotel hotel)
+        public async Task<IActionResult> Create([Bind("id,name,AverageRoomRate,Restaurant24Hour,buffet")] hotel hotel)
         {
             if (ModelState.IsValid)
             {

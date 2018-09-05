@@ -11,7 +11,6 @@ namespace VacationBiddingSite.Models.VacationDestinations
         public string name { get; set; }
         public double AverageRoomRate { get; set; }
         public bool Restaurant24Hour { get; set; }
-        public bool buffet { get; set; }
-        public city GetCity { get; set; }
+        public bool buffet { get; set; }        
     }
 }
